@@ -1,0 +1,19 @@
+{
+  "name": "basicnodeserver",
+  "version": "1.0.0",
+  "description": "MDNチュートリアル",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabixi000/BadicNodeServer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kabixi000/BadicNodeServer/issues"
+  },
+  "homepage": "https://github.com/kabixi000/BadicNodeServer#readme"
+}
