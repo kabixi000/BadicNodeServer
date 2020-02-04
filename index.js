@@ -1,15 +1,20 @@
+// 各モジュール読み込み
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
+// サーバオブジェクト作成 → 8125ポートで要求受付開始
+// 何らかの要求が来たら下記が一回実行される
 http.createServer(function (request, response) {
     console.log('request ', request.url);
 
+    // ファイルパス指定 指定なし → index.html
     var filePath = '.' + request.url;
     if (filePath == './') {
         filePath = './index.html';
     }
 
+    // 拡張子を抽出
     var extname = String(path.extname(filePath)).toLowerCase();
     var mimeTypes = {
         '.html': 'text/html',
@@ -30,6 +35,7 @@ http.createServer(function (request, response) {
 
     var contentType = mimeTypes[extname] || 'application/octet-stream';
 
+    // filePathのファイルを読んでコールバック関数実行
     fs.readFile(filePath, function(error, content) {
         if (error) {
             if(error.code == 'ENOENT') {
