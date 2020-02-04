@@ -1,2 +1,2 @@
-# BadicNodeServer
+# BasicNodeServer
 MDNチュートリアル
